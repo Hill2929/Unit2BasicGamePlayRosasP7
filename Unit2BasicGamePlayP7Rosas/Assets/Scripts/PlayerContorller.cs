@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class PlayerContorller : MonoBehaviour
 {
+    public float horizontalInput;
+    public float speed = 10.0f;
+    public float xRange = 10;
+    
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    public float horizontalInput;
-    public float speed = 10.0f;
-    public float xRange = 10; 
-
     // Update is called once per frame
     void Update()
     {
-        // Keep the player inn bounds
+        // Keep the player in bounds
         if (transform.position.x < -xRange)
         {
             transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
@@ -26,7 +26,7 @@ public class PlayerContorller : MonoBehaviour
         {
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
-        horizontalInput = Input.GetAxis("Horizonntal");
+        horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
     }
 }
