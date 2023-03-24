@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerContorller : MonoBehaviour
 {
     public float horizontalInput;
+    public float verticalInput;
     public float speed = 10.0f;
     public float xRange = 10;
     public GameObject projectilePrefab;
@@ -29,6 +30,9 @@ public class PlayerContorller : MonoBehaviour
         }
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+
+        verticalInput = Input.GetAxis("Vertical");
+        transform.Translate(Vector3.right * verticalInput * Time.deltaTime * speed);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
