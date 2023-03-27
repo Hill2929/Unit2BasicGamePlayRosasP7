@@ -596,6 +596,9 @@ MonoBehaviour:
   - {fileID: 2687909504833377444, guid: 72a24d061222747428c72dc7acc25cae, type: 3}
   - {fileID: 2391646125709804671, guid: c38ed2bb3ff2fda478a19bbc35f7a4fe, type: 3}
   - {fileID: 8371733390426635945, guid: 36398d1b191c25d41a73c297314f91e0, type: 3}
+  sideSpawnMinZ: 0
+  sideSpawnMaxZ: 0
+  sideSpawnX: 0
 --- !u!4 &1038747984
 Transform:
   m_ObjectHideFlags: 0
@@ -821,6 +824,14 @@ PrefabInstance:
     - target: {fileID: 1261075817373775867, guid: 5ba2f4fb577ddb54d97e46ef3303dfc9, type: 3}
       propertyPath: m_Name
       value: Food_Steak_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261075817373775867, guid: 5ba2f4fb577ddb54d97e46ef3303dfc9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6656471467884197316, guid: 5ba2f4fb577ddb54d97e46ef3303dfc9, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2361447573503960125, guid: 5ba2f4fb577ddb54d97e46ef3303dfc9, type: 3}
