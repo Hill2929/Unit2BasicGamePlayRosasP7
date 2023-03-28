@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class PlayerContorller : MonoBehaviour
 {
@@ -11,7 +12,11 @@ public class PlayerContorller : MonoBehaviour
     public float zRange = 10;
 
     public GameObject projectilePrefab;
-    
+
+    static int score = 0;
+    static int lives = 3;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,19 +41,20 @@ public class PlayerContorller : MonoBehaviour
         // Keep the player in bounds
         if (transform.position.z < -zRange)
         {
-            transform.position = new Vector3(-xRange, transform.position.y, -zRange);
+            transform.position = new Vector3(transform.position.x , transform.position.y, -zRange);
         }
         if (transform.position.z > zRange)
         {
-            transform.position = new Vector3(xRange, transform.position.y, zRange);
+            transform.position = new Vector3(transform.position.x, transform.position.y, zRange);
         }
         verticalInput = Input.GetAxis("Vertical");
-        transform.Translate(Vector3.right * verticalInput * Time.deltaTime * speed);
+        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // Launch a  projectile from the player
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
+
     }
 }

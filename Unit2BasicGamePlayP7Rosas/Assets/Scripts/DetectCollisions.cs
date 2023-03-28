@@ -4,21 +4,28 @@ using UnityEngine;
 
 public class DetectCollisions : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
-        Destroy(other.gameObject);
+        if (other.gameObject == GameObject.FindWithTag("Player"))
+        {
+            PlayerStats.lives--;
+            Debug.Log("lives=" + PlayerStats.lives);
+            if (PlayerStats.lives < 1)
+            {
+                Debug.Log("Game Over!");
+                Destroy(GameObject.FindWithTag("Player"));
+                CancelInvoke();
+            }
+
+        }
+        {
+            Destroy(gameObject);
+            Destroy(GameObject.FindWithTag("Food"));
+
+            PlayerStats.score++;
+            Debug.Log("Score=" + PlayerStats.score);
+        }
     }
 }
+
+

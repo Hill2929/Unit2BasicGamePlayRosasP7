@@ -5230,6 +5230,7 @@ GameObject:
   - component: {fileID: 5405121511703103311}
   - component: {fileID: 1648142660121680034}
   - component: {fileID: 2391646125960862946}
+  - component: {fileID: 8147177588882449508}
   m_Layer: 0
   m_Name: Dog_Doberman_01
   m_TagString: Untagged
@@ -5320,8 +5321,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.18875064, z: 0.30076623}
-  m_Center: {x: 0, y: 0.099947475, z: 0.0018480165}
+  m_Size: {x: 0.33015564, y: 0.18875064, z: 0.30076623}
+  m_Center: {x: -0.009483229, y: 0.099947475, z: 0.0018480165}
 --- !u!54 &1648142660121680034
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5350,7 +5351,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e601e9fb4f925124a888ec07a8ba79ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 10.03
+--- !u!114 &8147177588882449508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2391646125709804671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46053db8662bad540a9e01a654694d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2391646125709807303
 GameObject:
   m_ObjectHideFlags: 0
