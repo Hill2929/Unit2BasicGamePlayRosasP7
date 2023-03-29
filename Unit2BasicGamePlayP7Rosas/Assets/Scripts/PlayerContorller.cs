@@ -57,4 +57,8 @@ public class PlayerContorller : MonoBehaviour
         }
 
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("GameOver");
+    }
 }
